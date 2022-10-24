@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/rivermusica"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <com.google.android.gms.ads.admanager.AdManagerAdView
+                android:id="@+id/adManagerAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-6054964801548135/4204378821">
+            </com.google.android.gms.ads.admanager.AdManagerAdView>
+        </RelativeLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3">
+
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:id="@+id/jcplayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:scrollbarSize="4dp"
+        app:next_icon_color="@color/white"
+        app:pause_icon_color="@color/white"
+        app:play_icon_color="@color/white"
+        app:previous_icon_color="@color/white"
+        app:progress_color="@color/white"
+        app:random_icon_color="@color/white"
+        app:repeat_icon_color="@color/white"
+        app:repeat_one_icon_color="@color/white"
+        app:seek_bar_color="@color/white"
+        app:text_audio_current_duration_color="@color/white"
+        app:text_audio_duration_color="@color/white"
+        app:text_audio_title_color="@color/white" />
+
+
+</LinearLayout>
+
+    </LinearLayout>
